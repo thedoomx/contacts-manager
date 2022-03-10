@@ -1,9 +1,10 @@
 ﻿namespace Infrastructure.Persistence
 {
+	using Domain.Models;
 	using Microsoft.EntityFrameworkCore;
 
     internal interface IContactsManagerDbContext : IDbContext
     {
-        //DbSet<Question> Questions { get; }
+        DbSet<Contact> Contacts { get; }
     }
 }

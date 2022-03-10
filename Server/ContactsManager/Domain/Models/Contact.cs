@@ -31,7 +31,7 @@
 
         public string IBAN { get; private set; }
 
-        public Contact ChangeName(string name)
+        public Contact UpdateFirstName(string name)
         {
             this.ValidateFirstName(name);
             this.FirstName = name;
@@ -39,7 +39,7 @@
             return this;
         }
 
-        public Contact ChangeSurName(string summary)
+        public Contact UpdateSurName(string summary)
         {
             this.ValidateSurName(summary);
             this.SurName = summary;
@@ -47,7 +47,7 @@
             return this;
         }
 
-        public Contact ChangeAddress(string address)
+        public Contact UpdateAddress(string address)
         {
             this.ValidateSurName(address);
             this.Address = address;
@@ -55,9 +55,25 @@
             return this;
         }
 
-        public Contact ChangeDateOfBIrth(DateTime dateOfBirth)
+        public Contact UpdateDateOfBIrth(DateTime dateOfBirth)
         {
             this.DateOfBirth = dateOfBirth;
+
+            return this;
+        }
+
+        public Contact UpdatePhoneNumber(string phoneNumber)
+        {
+            this.ValidatePhoneNumber(phoneNumber);
+            this.PhoneNumber = phoneNumber;
+
+            return this;
+        }
+
+        public Contact UpdateIBAN(string iban)
+        {
+            this.ValidateIBAN(iban);
+            this.IBAN = iban;
 
             return this;
         }

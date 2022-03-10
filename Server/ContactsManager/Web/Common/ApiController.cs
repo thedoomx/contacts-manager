@@ -11,6 +11,7 @@ namespace Web.Common
     public abstract class ApiController : ControllerBase
     {
         private IMediator? mediator;
+        public const string Id = "{id}";
 
         protected IMediator Mediator
             => this.mediator ??= this.HttpContext

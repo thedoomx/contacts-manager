@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using Application.Queries.Common;
+using AutoMapper;
+using Domain.Models;
 
 namespace Application.Common
 {
@@ -6,7 +8,7 @@ namespace Application.Common
 	{
 		public MappingProfile()
 		{
-			//CreateMap<TaxData, CalculateTaxOutputModel>();
+			CreateMap<Contact, ContactOutputModel>();
 		}
 	}
 }
