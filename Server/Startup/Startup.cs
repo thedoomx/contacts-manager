@@ -44,6 +44,10 @@ namespace Startup
 
 			app
 				.UseRouting()
+				.UseCors(options => options
+					.AllowAnyOrigin()
+					.AllowAnyHeader()
+					.AllowAnyMethod())
 				.UseStaticFiles()
 				.UseEndpoints(endpoints => endpoints
 				.MapControllers());

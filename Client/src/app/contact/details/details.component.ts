@@ -12,7 +12,9 @@ export class DetailsComponent implements OnInit {
   id: string;
   contact: Contact;
 
-  constructor(private route: ActivatedRoute, private contactsService: ContactsService) { }
+  constructor(private route: ActivatedRoute, private contactsService: ContactsService) {
+    this.id = this.route.snapshot.paramMap.get('id');
+   }
 
   ngOnInit(): void {
     this.fetchContact();

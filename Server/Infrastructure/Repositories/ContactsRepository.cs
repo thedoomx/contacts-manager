@@ -55,7 +55,8 @@
 		public async Task<ContactOutputModel> GetDetails(int id, CancellationToken cancellationToken = default)
 		=> await this.mapper
 			   .ProjectTo<ContactOutputModel>(this
-					.All())
+					.All()
+					.Where(x => x.Id == id))
 			   .FirstOrDefaultAsync(cancellationToken);
 
 		public async Task<IEnumerable<ContactOutputModel>> Search(CancellationToken cancellationToken = default)
